@@ -105,8 +105,8 @@ class Inventario:
 # Cuerpo del programa
 # --------------------------------------------------------------------
 # Crear una instancia de la clase Inventario
-inventario = Inventario(host='localhost', user='root', password='', database='inventario')
-##inventario = Inventario(host='antoniocaminos.mysql.pythonanywhere-services.com', user='antoniocaminos', password='Contra53a24', database='antoniocaminos$default')
+##inventario = Inventario(host='localhost', user='root', password='', database='inventario')
+inventario = Inventario(host='antoniocaminos.mysql.pythonanywhere-services.com', user='antoniocaminos', password='Contra53a24', database='antoniocaminos$default')
 
 ruta_destino = "./static/imagenes/"
 
