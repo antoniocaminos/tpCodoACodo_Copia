@@ -1,0 +1,13 @@
+    """
+    
+     if _foto.filename != '':
+        now = datetime.now()
+        tiempo = now.strftime("%Y%H%M%S")
+        nuevoNombreFoto = tiempo + '_' + _foto.filename
+        _foto.save("uploads/" + nuevoNombreFoto)
+        
+        tiempo = datetime.now().strftime("%Y%H%M%S")
+        
+        nombre_imagen = f"{nombre_base}_{int(tiempo)}{extension}" 
+
+    """

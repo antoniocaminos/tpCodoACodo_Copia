@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Libros 🚀</title>
+    <link rel="stylesheet" href="static/css/estilos.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar-index">
+            <img class="logo-nav" src="./static/imagenes/logo_libro.jpg" alt="logo">
+        </nav>
+    </header>
+
+    <div>
+        <div class="logo-centrado">
+            <img src="./static/imagenes/logo_libro.jpg" alt="logo">
+        </div>
+        <h1>Gestión de Libros</h1><br>
+        <table>
+            <tr>
+                <td class="contenedor-centrado"><a href="altas.html">Alta de libros</a></td>
+            </tr>
+            <tr>
+                <td class="contenedor-centrado"><a href="listado.html">Listado de libros</a></td>
+            </tr>
+            <tr>
+                <td class="contenedor-centrado"><a href="modificaciones.html">Modificar datos de libros</a></td>
+            </tr>
+            <tr>
+                <td class="contenedor-centrado"><a href="listadoEliminar.html">Eliminar libros</a></td>
+            </tr>
+        </table>
+        <style>
+            /* Estilos para el iframe */
+            .iframe-container {
+                position: relative;
+                width: 100%;
+                height: 0;
+                padding-bottom: 75%; /* Ajusta esta proporción según tus necesidades */
+            }
+            .iframe-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: none; /* Elimina el borde del iframe */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>TP Anterior</h1>
+        <div class="iframe-container">
+            <iframe src="https://tp-codo-a-codo-grupo16.vercel.app/peliculas.html"></iframe>
+        </div>
+</body>
+
+</html>

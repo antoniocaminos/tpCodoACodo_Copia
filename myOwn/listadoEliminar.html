@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado y Eliminación de Libros 🚀</title>
+    <link rel="stylesheet" href="static/css/estilos.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar-index">
+            <img class="logo-nav" src="./static/imagenes/logo_libro.jpg" alt="logo">
+        </nav>
+    </header>
+
+    <div class="logo-centrado">
+        <img src="./static/imagenes/logo_libro.jpg" alt="logo">
+    </div>
+    <h1>Listado y Eliminación de Libros del Inventario</h1><br>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>Cantidad</th>                
+                <th align="right">Precio</th>
+                <th>Imagen</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tablaLibros"></tbody>
+    </table><br>
+
+    <div class="contenedor-centrado">
+        <a href="index.html">Menú principal</a>
+    </div>
+    <script>
+        const URL = "http://127.0.0.1:5000/";
+
+        function eliminarLibro(isbn) {
+            fetch(URL + 'libros/' + isbn, {
+                method: 'DELETE'
+            })
+            .then(function (response) {
+                if (response.ok) {
+                    alert('Libro eliminado correctamente.');
+                    location.reload(); // Recargar la página para actualizar la lista
+                } else {
+                    throw new Error('Error al eliminar el libro.');
+                }
+            })
+            .catch(function (error) {
+                alert('Error al eliminar el libro.');
+                console.error('Error:', error);
+            });
+        }
+
+        fetch(URL + 'libros')
+            .then(function (response) {
+                if (response.ok) {
+                    return response.json(); 
+                } else {
+                    throw new Error('Error al obtener los libros.');
+                }
+            })
+            .then(function (data) {
+                let tablaLibros = document.getElementById('tablaLibros');
+
+                for (let libro of data) {
+                    let fila = document.createElement('tr');
+                    fila.innerHTML = `
+                        <td>${libro.isbn}</td>
+                        <td>${libro.title}</td>
+                        <td>${libro.author}</td>
+                        <td>${libro.quantity}</td>
+                        <td align="right">${libro.price}</td>
+                        <td><img src="./static/imagenes/${libro.image}" alt="Imagen del libro" style="width: 100px;"></td>
+                        <td><button type="button" onclick="eliminarLibro(${libro.isbn})">Eliminar</button></td>`;
+                    tablaLibros.appendChild(fila);
+                }
+            })
+            .catch(function (error) {
+                alert('Error al obtener los libros.');
+                console.error('Error:', error);
+            });
+    </script>
+</body>
+</html>

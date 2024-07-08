@@ -1,0 +1,8 @@
+/home/FlorCodo/mysite/flask_app.py
+
+/home/FlorCodo/mysite/static/imagenes
+
+Database host address:FlorCodo.mysql.pythonanywhere-services.com
+Username:FlorCodo
+
+catalogo = Catalogo(host="localhost", user="root", password="root-123456", database="miapp")

@@ -1,0 +1,162 @@
+/* Estilos para todo el proyecto */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212; /* Color de fondo oscuro */
+    color: #F5F5F5; /* Color de texto claro */
+    margin-top: 150px; /* Ajuste para dejar espacio sobre el header fijo */
+}
+
+.navbar-index {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #4B2C20; /* Marrón oscuro */
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo-nav {
+    height: 60px; /* Ajuste del tamaño del logo */
+    margin-left: 20px;
+}
+
+.logo-centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #FFD700; /* Dorado */
+}
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    background-color: #4B2C20; /* Marrón oscuro */
+    border: 1px solid #FFD700; /* Bordes dorados */
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    color: #F5F5F5; /* Color de texto claro */
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: center;
+    color: #F5F5F5; /* Color de texto claro */
+}
+
+table th {
+    background-color: #121212; /* Fondo más oscuro para el encabezado */
+}
+
+table td img {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #FFD700; /* Dorado */
+    color: #4B2C20; /* Texto marrón oscuro */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #F5B041; /* Dorado más oscuro */
+}
+
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFD700; /* Dorado */
+    color: #4B2C20; /* Texto marrón oscuro */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+    background-color: #F5B041; /* Dorado más oscuro */
+    color: #121212; /* Texto más oscuro */
+}
+
+.contenedor-centrado {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f9f9f9;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #121212;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #4B2C20; /* Marrón oscuro */
+    border: 1px solid #FFD700; /* Bordes dorados */
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #F5F5F5; /* Color de texto claro */
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #F5F5F5; /* Fondo claro */
+    color: #121212; /* Texto oscuro */
+}
+
+input[type="submit"] {
+    padding: 10px;
+    background-color: #FFD700; /* Dorado */
+    color: #4B2C20; /* Texto marrón oscuro */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #F5B041; /* Dorado más oscuro */
+}
